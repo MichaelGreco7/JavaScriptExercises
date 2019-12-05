@@ -1,13 +1,25 @@
 // JavaScript Exercises
 // 1) Write a function that displays the result of 5+6+7+8+9+10.
-var result = [5 + 6 + 7 + 8 + 9 + 10];
-function display(result) {
-  return result;
+
+function display() {
+  return 5 + 6 + 7 + 8 + 9 + 10;
 }
-display(result);
+console.log(display());
 
 // 2) Write a function that returns the perimeter of a rectangle with a width of 5 and a height of 8.
+
+function perimeter5And8() {
+  return 5 + 5 + 8 + 8;
+}
+console.log(perimeter5And8());
+
 // 3) Write a new function that returns the perimeter of a rectangle with the width and height being specified as arguments to the function.
+
+function perimeter(width, height) {
+  return 2 * (width + height);
+}
+console.log(perimeter(2, 4));
+
 // 4) Write a function that converts fahrenheit, given as an argument, to celcius.
 // 5) Write a function that converts celcius, given as an argumen, to fahrenheit.
 // 6) Write a function that calculates tip with 2 arguments, the bill and the tip percentage. Use the build-in JS toFixed() method to round the answer to two decimal places.
