@@ -21,15 +21,26 @@ function perimeter(width, height) {
 console.log(perimeter(2, 4));
 
 // 4) Write a function that converts fahrenheit, given as an argument, to celcius.
+
 // 5) Write a function that converts celcius, given as an argumen, to fahrenheit.
+function convertToF(celcius) {
+  fahrenheit = celcius * (9 / 5) + 32;
+  return fahrenheit;
+}
+convertToF(20);
+console.log(fahrenheit);
 // 6) Write a function that calculates tip with 2 arguments, the bill and the tip percentage. Use the build-in JS toFixed() method to round the answer to two decimal places.
 // 7) Write a function that takes a number an an argument and returns the sum of each individual digit. So an input of 998 would return 26 (because 9 + 9 + 8) is 26.
 // 8) Write the same function above, but that takes an input from the built-in browser function, prompt().
 // 9) Write a function that takes an argument in seconds and specifies the equivalent number of years.
 // 10) Write a function that returns the current date and time.
+const currentDate = new Date();
+console.log(Date());
+
 // 11) Write a function that returns the date 33 days from now.
 // 12) Write a function that returns the mean of an array of numbers.
 // 13) Write a function that randomly generates a number between 1 and 12, and returns the name of the corresponding month. (Hint: Look up how to get a random number in JavaScript.)
+
 // 14) Write a function that takes three numbers as arguments, and returns the same 3 numbers in increasing order (more specifically, non-decreasing order if multiple numbers are the same).
 // 15) Write a function that returns the appropriate boolean value if a given string argument is a palindrome, where the string is the same when reversed. Examples of palindromes are "racecar" and "3003".
 // Ex: isPalindrome("racecar") returns true. isPalindrome("racecars") returns false.
