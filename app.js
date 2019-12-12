@@ -21,7 +21,12 @@ function perimeter(width, height) {
 console.log(perimeter(2, 4));
 
 // 4) Write a function that converts fahrenheit, given as an argument, to celcius.
-
+function convertToC(fahrenheit) {
+  celcius = fahrenheit * (9 / 5) - 32;
+  return celcius;
+}
+convertToC(10);
+console.log(celcius);
 // 5) Write a function that converts celcius, given as an argumen, to fahrenheit.
 function convertToF(celcius) {
   fahrenheit = celcius * (9 / 5) + 32;
