@@ -35,14 +35,41 @@ function convertToF(celcius) {
 convertToF(20);
 console.log(fahrenheit);
 // 6) Write a function that calculates tip with 2 arguments, the bill and the tip percentage. Use the build-in JS toFixed() method to round the answer to two decimal places.
+function calculateTip(bill, percentage) {
+  return (bill * (percentage * 0.01)).toFixed(2);
+}
+console.log(calculateTip(100, 13));
 // 7) Write a function that takes a number an an argument and returns the sum of each individual digit. So an input of 998 would return 26 (because 9 + 9 + 8) is 26.
+function numCounter(num) {
+  var str = num.toString();
+  var newList = str.split("");
+
+  var counter = 0;
+  newList.forEach(val => (counter += Number(val)));
+  console.log(counter);
+}
+numCounter(1234567890);
 // 8) Write the same function above, but that takes an input from the built-in browser function, prompt().
+function numCounter2() {
+  var str = prompt().toString();
+  var newList = str.split("");
+
+  var counter = 0;
+  newList.forEach(val => (counter += Number(val)));
+  console.log(counter);
+}
+numCounter2();
 // 9) Write a function that takes an argument in seconds and specifies the equivalent number of years.
 // 10) Write a function that returns the current date and time.
-const currentDate = new Date();
-console.log(Date());
-
+const formatDate = (date = new Date()) => {
+  const days = date.getDate();
+  const months = date.getMonth() + 1;
+  const years = date.getFullYear();
+  return `${days}/${months}/${years}`;
+};
+console.log(formatDate());
 // 11) Write a function that returns the date 33 days from now.
+
 // 12) Write a function that returns the mean of an array of numbers.
 // 13) Write a function that randomly generates a number between 1 and 12, and returns the name of the corresponding month. (Hint: Look up how to get a random number in JavaScript.)
 
@@ -52,7 +79,33 @@ console.log(Date());
 // 16) Write a function that returns true when two inputs are equivalent when using coercion, but not equivalent without coercion.
 // Ex: isCoerced(5,"5") returns true. isCoerced(5,5) returns false. isCoerced(4,"shoe") returns false.
 // 17) Write a function called isEven() that returns true if a given argument is even.
+function isEven(num) {
+  // return true if even
+  if (num % 2 === 0) {
+    return true;
+    // return false otherwise
+  } else {
+    return false;
+  }
+}
+console.log(isEven(4));
+
 // 18) Write a function called isOdd() that returns true if a given argument is odd. Do this by only using the isEven() function you wrote previously.
+// function isOdd(num) {
+//   // return true if even
+//   if (num % 3 === 0) {
+//     return true;
+//     // return false otherwise
+//   } else {
+//     return false;
+//   }
+// }
+function isOdd(num) {
+  if (num === 0) return false;
+
+  return (num & -num) === 1;
+}
+console.log(isOdd(5));
 // 19) Write a function that returns true if a given argument is a multiple of 3. Examples of multiples of 3 are 0,3,6,9 ...
 // 20) Write a function that takes two arguments. Check if the first argument is the multiple of the second argument. Return the appropriate boolean.
 // Ex. checkMultiple(20,5) returns true. checkMultiple(21,5) returns false.
