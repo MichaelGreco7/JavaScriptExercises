@@ -71,6 +71,14 @@ console.log(formatDate());
 // 11) Write a function that returns the date 33 days from now.
 
 // 12) Write a function that returns the mean of an array of numbers.
+function calculate(array) {
+  var sum = 0;
+  for (var i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+  }
+  return sum;
+}
+console.log(calculate([24, 88, 12, 4]));
 // 13) Write a function that randomly generates a number between 1 and 12, and returns the name of the corresponding month. (Hint: Look up how to get a random number in JavaScript.)
 
 // 14) Write a function that takes three numbers as arguments, and returns the same 3 numbers in increasing order (more specifically, non-decreasing order if multiple numbers are the same).
@@ -107,6 +115,10 @@ function isOdd(num) {
 }
 console.log(isOdd(5));
 // 19) Write a function that returns true if a given argument is a multiple of 3. Examples of multiples of 3 are 0,3,6,9 ...
+function multipleOf3(num) {
+  if (num % 3) return true;
+}
+console.log(multipleOf3(13));
 // 20) Write a function that takes two arguments. Check if the first argument is the multiple of the second argument. Return the appropriate boolean.
 // Ex. checkMultiple(20,5) returns true. checkMultiple(21,5) returns false.
 // 21) Write a function that takes an array of numbers as an argument and returns the smallest number in the array.
